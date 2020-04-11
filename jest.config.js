@@ -3,7 +3,7 @@
 const jestPreset = require('jest-preset-angular/jest-preset');
 const { globals } = jestPreset;
 const tsjest = globals['ts-jest'];
-// set the correct path to the spect ts-config file
+// set the correct path to the spec ts-config file
 // the default for the jest-preset-angular package
 // points to an incorrect path:
 // <rootDir/src/tsconfig.spec.js
@@ -22,4 +22,5 @@ module.exports = {
   globals: { ...globalOverrides },
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/src/setupJest.ts'],
+  testPathIgnorePatterns: ['<rootDir>/cypress/'],
 };
