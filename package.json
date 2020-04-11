@@ -8,9 +8,10 @@
     "test": "jest",
     "test:watch": "npm run test --watch",
     "lint": "ng lint",
-    "e2e": "start-server-and-test start http://localhost:4200 cy:run",
+    "e2e": "start-server-and-test start http://localhost:4200 cy:record",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:record": "cypress run --record --key 5de2876e-a43d-42f2-bfac-53d489a5a5a5"
   },
   "private": true,
   "dependencies": {
