@@ -21,7 +21,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
 
       - name: Cache dependencies
         uses: actions/cache@v1
@@ -51,7 +51,7 @@ jobs:
         run: npm run build -- --prod
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@releases/v3.4.8
         with:
           ACCESS_TOKEN: $ {{ secrets.ACCESS_TOKEN }} # d89e8278a0cc829686d66a41107e1e09ca5b936d
           BRANCH: gh-pages
