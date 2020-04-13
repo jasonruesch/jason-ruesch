@@ -53,6 +53,6 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: $ {{ secrets.ACCESS_TOKEN }} # d89e8278a0cc829686d66a41107e1e09ca5b936d
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist/jason-ruesch
