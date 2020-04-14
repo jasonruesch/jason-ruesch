@@ -21,11 +21,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Jason Ruesch');
   });
 
-  it('should render title', () => {
-    spectator.detectChanges();
-    const compiled = spectator.element;
-    expect(compiled.querySelector('.content span').textContent).toContain(
-      'Jason Ruesch app is running!'
-    );
-  });
+  // it('should render title', () => {
+  //   spectator.detectChanges();
+  //   const compiled = spectator.element;
+  //   expect(compiled.querySelector('.content span').textContent).toContain(
+  //     'Jason Ruesch app is running!'
+  //   );
+  // });
 });
