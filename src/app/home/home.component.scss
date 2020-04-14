@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  height: 100%;
+  padding: 0 3em;
+}
+
+.logo {
+  background-image: url(../../assets/jason-ruesch-dark.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 875px;
+  width: 100%;
+}
