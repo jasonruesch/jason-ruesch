@@ -3,10 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "jason-ruesch": {
+    "jasonruesch.github.io": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@ngneat/spectator:spectator-component": {
           "style": "scss"
         }
       },
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/jason-ruesch",
+            "outputPath": "dist/jasonruesch.github.io",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "jason-ruesch:build"
+            "browserTarget": "jasonruesch.github.io:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "jason-ruesch:build:production"
+              "browserTarget": "jasonruesch.github.io:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "jason-ruesch:build"
+            "browserTarget": "jasonruesch.github.io:build"
           }
         },
         "lint": {
@@ -90,16 +93,43 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "jason-ruesch:serve"
+            "devServerTarget": "jasonruesch.github.io:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "jason-ruesch:serve:production"
+              "devServerTarget": "jasonruesch.github.io:serve:production"
+            }
+          }
+        },
+        "cypress-run": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "jasonruesch.github.io:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "jasonruesch.github.io:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@briebug/cypress-schematic:cypress",
+          "options": {
+            "devServerTarget": "jasonruesch.github.io:serve",
+            "watch": true,
+            "headless": false
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "jasonruesch.github.io:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "jason-ruesch"
+  "defaultProject": "jasonruesch.github.io",
+  "cli": {
+    "defaultCollection": "@ngneat/spectator"
+  }
 }
