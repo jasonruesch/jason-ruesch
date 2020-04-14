@@ -1,0 +1,5 @@
+git branch -D master
+git checkout --orphan master
+git rm -rf .
+git commit --allow-empty -m "Initial commit"
+git push origin master
