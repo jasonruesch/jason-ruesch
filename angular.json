@@ -8,6 +8,9 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@ngneat/spectator:spectator-component": {
+          "style": "scss"
         }
       },
       "root": "",
@@ -125,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "jasonruesch.github.io"
+  "defaultProject": "jasonruesch.github.io",
+  "cli": {
+    "defaultCollection": "@ngneat/spectator"
+  }
 }
