@@ -1,0 +1,12 @@
+{
+  "name": "@jasonruesch/source",
+  "version": "0.3.6",
+  "license": "MIT",
+  "scripts": {
+    "start": "nx serve",
+    "build": "nx build",
+    "test": "nx test"
+  },
+  "private": true,
+  "type": "module"
+}
