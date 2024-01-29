@@ -1,6 +1,6 @@
 {
   "name": "@jasonruesch/source",
-  "version": "0.3.7",
+  "version": "0.4.3",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
@@ -8,5 +8,9 @@
     "test": "nx test"
   },
   "private": true,
+  "dependencies": {
+    "react-router": "6.21.3",
+    "tslib": "2.6.2"
+  },
   "type": "module"
 }
